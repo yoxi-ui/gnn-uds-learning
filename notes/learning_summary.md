@@ -164,7 +164,7 @@ DeepWalk 的核心步骤：
 消息传递的抽象形式是：
 
 $$
-m_v^{(l)}=\operatorname{AGGREGATE}_{u\in\mathcal{N}(v)}
+m_v^{(l)}=\mathrm{AGGREGATE}_{u\in\mathcal{N}(v)}
 \phi^{(l)}(h_v^{(l)},h_u^{(l)},e_{uv})
 $$
 
