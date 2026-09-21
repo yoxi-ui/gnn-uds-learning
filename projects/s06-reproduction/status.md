@@ -20,6 +20,7 @@
 - 已汇总事件级 Node/Edge loss，并定位最大误差事件；
 - 已在原始物理量上计算 RMSE、MAE 和 R²；
 - 已完成 `GATconv + Conv1D` 与 `GATconv + GRU` 的训练阶段对照；
+- 已将汇总表、报告和曲线复制到同目录的 `results/`，便于后续提交到 GitHub；
 - 详细数值、指标和下一步建议见同目录的 [`experiment_results.md`](experiment_results.md)。
 
 ## 当前实验结果摘要

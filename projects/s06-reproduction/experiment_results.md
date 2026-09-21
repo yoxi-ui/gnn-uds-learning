@@ -48,12 +48,17 @@
 
 ## 5. 本地结果文件
 
-完整分析结果保存在本地源码目录：
+完整分析结果来源于本地源码目录：
 
 ```text
 D:\论文\GNN-UDS\surrogate\results\shunqing\test_gpu_500\analysis
 D:\论文\GNN-UDS\surrogate\results\shunqing\model_comparison
 ```
+
+适合纳入 GitHub 的轻量结果已经复制到本项目：
+
+- 测试分析：[results/test_gpu_500/analysis](results/test_gpu_500/analysis)
+- 模型对照：[results/model_comparison](results/model_comparison)
 
 其中包括：
 
@@ -63,7 +68,7 @@ D:\论文\GNN-UDS\surrogate\results\shunqing\model_comparison
 - 训练/验证损失对照曲线；
 - `GATconv + Conv1D` 与 `GATconv + GRU` 的对照表。
 
-为避免泄露数据和造成仓库过大，原始 `.npy` 数据、模型权重和大规模运行目录不纳入学习记录仓库。
+为避免泄露数据和造成仓库过大，原始 `.npy` 数据、模型权重和大规模运行目录不纳入学习记录仓库；当前 `results/` 目录只包含汇总表、报告和绘图文件。
 
 ## 6. 使用的分析脚本
 
