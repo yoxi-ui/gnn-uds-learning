@@ -13,22 +13,35 @@
 
 ## 当前阶段
 
-正在进行 SWMM 数据生成：
+已完成 `shunqing` 数据生成、GPU 训练、测试分析和第一轮时间模块对照实验。
 
-```powershell
-python main.py --simulate --env shunqing --data_dir paper_like --rain_suffix bpswmm --processes 1
-```
+- 123 个降雨事件已完成测试，共 92,997 个时间步；
+- 主模型为 `GATconv + Conv1D`，已完成 500 epoch 训练和测试；
+- 已汇总事件级 Node/Edge loss，并定位最大误差事件；
+- 已在原始物理量上计算 RMSE、MAE 和 R²；
+- 已完成 `GATconv + Conv1D` 与 `GATconv + GRU` 的训练阶段对照；
+- 详细数值、指标和下一步建议见同目录的 [`experiment_results.md`](experiment_results.md)。
 
-最近一次检查时，123 个输入事件中约 90 个输出事件已经完成，当前进程仍在运行。数据生成结束后，`paper_like` 中才会出现 `states.npy`、`perfs.npy`、`rains.npy`、`edge_states.npy`、`event_id.npy` 和 `dones.npy`。
+## 当前实验结果摘要
+
+| 项目 | 结果 |
+|---|---:|
+| 事件宏平均 Node loss | 0.006468 |
+| 事件宏平均 Edge loss | 0.001940 |
+| 最大误差事件 | `bpswmm_1011` |
+| 最大事件总 loss | 0.021158 |
+| 最佳验证模型 | `GATconv + Conv1D` |
+
+主模型的原始物理量指标和对照实验完整表格已记录在 [`experiment_results.md`](experiment_results.md)。
 
 ## 下一步顺序
 
-1. 等待完整模拟结束并确认上述 `.npy` 文件生成；
-2. 用 2 个 epoch 做训练 smoke test；
-3. 将 smoke test 扩展到 100 或 500 个 epoch；
+1. 将测试曲线和事件级 CSV 作为实验附件整理保存；
+2. 补充 `GRU` 模型在 123 个测试事件上的完整原始物理量指标；
+3. 记录单样本推理延迟、吞吐量、显存和参数量；
 4. 再尝试 60→60、3 层空间 GNN、edge fusion 和 flooding 配置；
-5. 记录 RMSE/MAE、洪涝分类指标、推理延迟、吞吐量和显存；
-6. 做 GNN 与普通 NN、node-edge fusion 与无 fusion 的对照实验。
+5. 做 GNN 与普通 NN、node-edge fusion 与无 fusion 的对照实验；
+6. 保持原始 `.npy` 数据、模型权重和其他大文件留在本地，不直接上传仓库。
 
 ## 重要提醒
 

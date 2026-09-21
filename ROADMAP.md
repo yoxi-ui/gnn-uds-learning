@@ -10,10 +10,12 @@
 
 ## 阶段二：完成最小复现（当前）
 
-- [ ] 完成 shunqing 的 SWMM 数据生成
-- [ ] 确认 `states.npy`、`perfs.npy`、`rains.npy` 等文件生成
-- [ ] 运行 2 epoch smoke test
-- [ ] 检查 loss 是否正常下降、模型文件是否保存
+- [x] 完成 shunqing 的 SWMM 数据生成
+- [x] 确认 `states.npy`、`perfs.npy`、`rains.npy` 等文件生成
+- [x] 运行 2 epoch smoke test
+- [x] 检查 loss 是否正常下降、模型文件是否保存
+
+补充：已完成 500 epoch 的 GPU 训练、123 个事件测试、事件级损失汇总，以及原始物理量上的 RMSE、MAE、R² 计算。详情见 [`projects/s06-reproduction/status.md`](projects/s06-reproduction/status.md) 和 [`projects/s06-reproduction/experiment_results.md`](projects/s06-reproduction/experiment_results.md)。
 
 ## 阶段三：论文风格实验
 
