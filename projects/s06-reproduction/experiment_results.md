@@ -77,3 +77,30 @@ D:\论文\GNN-UDS\surrogate\results\shunqing\model_comparison
 - `analyze_test_results.py`
 - `compare_training_runs.py`
 - `evaluate_saved_events.py`
+
+## 7. NN/GAT 与 edge-flow fusion 消融
+
+为分析空间拓扑和节点-边流量一致性的作用，补充了四组 `Conv1D` 模型。除 `conv` 和 `edge_fusion` 外，数据、事件划分、归一化、序列窗口、batch size 和训练轮数均保持一致。
+
+| 模型 | edge_fusion | 最佳 epoch | 验证 Node loss | 验证 Edge loss | 验证总 loss | 参数量 | 训练时间（秒） |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| `NN + Conv1D` | False | 436 | 0.013317 | 0.000588 | 0.013905 | 588,892 | 30.07 |
+| `NN + Conv1D` | True | 436 | 0.004451 | 0.000601 | 0.005053 | 559,738 | 83.65 |
+| `GATconv + Conv1D` | False | 475 | 0.004167 | 0.001304 | 0.005471 | 607,670 | 98.04 |
+| `GATconv + Conv1D` | True | 463 | 0.003081 | 0.002855 | 0.005936 | 607,412 | 132.02 |
+
+123 事件离线测试的 pooled loss：
+
+| 模型 | edge_fusion | Node loss | Edge loss | Total loss |
+|---|---:|---:|---:|---:|
+| `NN + Conv1D` | False | 0.030643 | 0.001204 | 0.031848 |
+| `NN + Conv1D` | True | 0.009912 | 0.001115 | 0.011027 |
+| `GATconv + Conv1D` | False | 0.006356 | 0.001850 | 0.008206 |
+| `GATconv + Conv1D` | True | 0.005461 | 0.003876 | 0.009337 |
+
+其中 `edge_fusion=True` 在当前源码中表示输出级 edge-flow fusion：用预测的边流量和管网关联矩阵重建节点 `q_us`、`q_ds`。它不是完全关闭或打开所有隐藏层的 `NodeEdge` 交互，因此报告中使用“edge-flow fusion / 输出级节点-边流量一致性融合”的表述。
+
+详细四模型对照见 [`results/model_comparison/edge_fusion_comparison.md`](results/model_comparison/edge_fusion_comparison.md)，测试汇总见 [`results/model_comparison/edge_fusion_test_metrics.csv`](results/model_comparison/edge_fusion_test_metrics.csv)。融合模型的原始物理量指标和曲线位于：
+
+- [`results/edge_fusion_nn`](results/edge_fusion_nn)
+- [`results/edge_fusion_gat`](results/edge_fusion_gat)

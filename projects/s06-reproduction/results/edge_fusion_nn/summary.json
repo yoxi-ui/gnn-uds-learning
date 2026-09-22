@@ -1,0 +1,64 @@
+{
+  "event_count": 123,
+  "total_time_steps": 92997,
+  "macro_mean_node_loss": 0.010385051575996647,
+  "macro_mean_edge_loss": 0.0011848343883610777,
+  "macro_mean_total_loss": 0.011569885964357726,
+  "pooled_node_loss": 0.009911814704537392,
+  "pooled_edge_loss": 0.0011149548226967454,
+  "pooled_total_loss": 0.011026769527234137,
+  "worst_event": "bpswmm_113",
+  "worst_event_total_loss": 0.04919383465312421,
+  "best_event": "bpswmm_65",
+  "best_event_total_loss": 0.001784995081834495,
+  "raw_metrics": [
+    {
+      "group": "node",
+      "feature": "depthN",
+      "rmse": 0.42017316818237305,
+      "mae": 0.14801014959812164,
+      "r2": 0.8796371281109641,
+      "n_values": 10508661
+    },
+    {
+      "group": "node",
+      "feature": "q_us",
+      "rmse": 3.5816867351531982,
+      "mae": 1.3110451698303223,
+      "r2": 0.9868464336598679,
+      "n_values": 10508661
+    },
+    {
+      "group": "node",
+      "feature": "q_ds",
+      "rmse": 3.8726556301116943,
+      "mae": 1.4209812879562378,
+      "r2": 0.9833390295663519,
+      "n_values": 10508661
+    },
+    {
+      "group": "edge",
+      "feature": "depthL",
+      "rmse": 0.0254785418510437,
+      "mae": 0.012121508829295635,
+      "r2": 0.9899484097403843,
+      "n_values": 12182607
+    },
+    {
+      "group": "edge",
+      "feature": "volumeL",
+      "rmse": 13.157064437866211,
+      "mae": 4.977969169616699,
+      "r2": 0.9928597126669905,
+      "n_values": 12182607
+    },
+    {
+      "group": "edge",
+      "feature": "flow_vol",
+      "rmse": 3.2284066677093506,
+      "mae": 1.3507384061813354,
+      "r2": 0.9787842205972285,
+      "n_values": 12182607
+    }
+  ]
+}
