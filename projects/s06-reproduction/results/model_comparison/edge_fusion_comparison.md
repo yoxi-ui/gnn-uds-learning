@@ -14,6 +14,8 @@
 
 下表的最佳轮次按每轮 Node loss + Edge loss 最小记录；训练耗时取 `time.npy` 最后一项。源码中的 `test_loss.npy` 在训练过程中记录的是留出集验证损失。
 
+本报告按人类习惯将第一轮记为 epoch 1，例如数组索引 435 写为第 436 轮；旧的 `training_comparison.md` 和 `nn_gnn_test_comparison.md` 沿用脚本的 0-based 索引写法，因此其中的 435/474 分别对应这里的第 436/475 轮。
+
 | 模型 | edge_fusion | 最佳 epoch | Node loss | Edge loss | 总 loss | 参数量 | 训练时间（秒） |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `NN + Conv1D` | False | 436 | 0.013317 | 0.000588 | 0.013905 | 588,892 | 30.07 |
