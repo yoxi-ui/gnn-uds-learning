@@ -1,0 +1,60 @@
+{
+  "input_dir": "D:\\论文\\GNN-UDS\\surrogate\\model\\shunqing\\s06_baseline_analysis_10000_best",
+  "output_dir": "D:\\论文\\GNN-UDS\\surrogate\\model\\shunqing\\s06_baseline_analysis_10000_best_intensity",
+  "source_files": [
+    "event_rainfall_features.csv",
+    "event_teacher_forced_metrics.csv",
+    "rainfall_group_thresholds.json"
+  ],
+  "event_error_count": 30,
+  "event_error_counts_by_split": {
+    "validation": 27,
+    "heldout_test": 3
+  },
+  "threshold_provenance": {
+    "supplied": {
+      "total_rainfall": {
+        "q1": 26.60000003874302,
+        "q2": 42.200000002980225
+      },
+      "max_step_intensity": {
+        "q1": 7.300000190734859,
+        "q2": 13.600000381469727
+      }
+    },
+    "recomputed_from_train": {
+      "total_rainfall": {
+        "q1": 26.60000003874302,
+        "q2": 42.200000002980225
+      },
+      "max_step_intensity": {
+        "q1": 7.300000190734859,
+        "q2": 13.600000381469728
+      }
+    },
+    "training_event_count": 118
+  },
+  "groupings": {
+    "rainfall_group": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "max_intensity_group": [
+      "low_peak",
+      "medium_peak",
+      "high_peak"
+    ]
+  },
+  "bootstrap": {
+    "unit": "event",
+    "reps": 10000,
+    "seed": 20260928,
+    "ci": "percentile 2.5%-97.5%"
+  },
+  "small_sample_caveat": {
+    "validation_total_rainfall_small_n": 3,
+    "validation_max_intensity_low_peak_n": 5,
+    "heldout_test_n": 3
+  }
+}

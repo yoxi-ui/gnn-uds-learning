@@ -1,0 +1,26 @@
+{
+  "output_dir": "D:\\\u8bba\u6587\\GNN-UDS\\surrogate\\model\\shunqing\\s06_training_report",
+  "runs": {
+    "2000": "D:\\\u8bba\u6587\\GNN-UDS\\surrogate\\model\\shunqing\\s06_formal_2000_b8_seed42",
+    "5000": "D:\\\u8bba\u6587\\GNN-UDS\\surrogate\\model\\shunqing\\s06_formal_5000_b8_seed42",
+    "10000": "D:\\\u8bba\u6587\\GNN-UDS\\surrogate\\model\\shunqing\\s06_formal_10000_b8_seed42"
+  },
+  "evaluation_checkpoint": "best",
+  "heldout_events": [
+    "test_bpswmm_118",
+    "test_bpswmm_133",
+    "test_bpswmm_1612"
+  ],
+  "window_policy": "60 input -> 60 output, stride 60, teacher-forced true history",
+  "artifacts": [
+    "event_10000_variable_diagnostics.png",
+    "event_diagnostics.csv",
+    "event_diagnostics.md",
+    "event_diagnostics_detailed.csv",
+    "event_metrics_comparison.png",
+    "loss_curves.csv",
+    "loss_curves.png",
+    "three_run_comparison.csv",
+    "three_run_comparison.md"
+  ]
+}

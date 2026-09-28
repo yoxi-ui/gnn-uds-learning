@@ -1,0 +1,13 @@
+{
+  "epochs_completed": 10000,
+  "best_validation_loss": 0.02569115530786803,
+  "best_epoch": 9098,
+  "train_events": 118,
+  "validation_events": 27,
+  "heldout_events": 3,
+  "validation_mode": "fixed",
+  "validation_batches": 8,
+  "validation_seed": 42,
+  "validation_batch_indices": "validation_batch_indices.npy",
+  "smoke": false
+}

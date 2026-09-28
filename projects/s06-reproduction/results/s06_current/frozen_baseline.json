@@ -1,0 +1,28 @@
+{
+  "data_dir": "D:\\论文\\GNN-UDS\\surrogate\\envs\\data\\shunqing\\s06_148_118_27_3",
+  "model_dir": "D:\\论文\\GNN-UDS\\surrogate\\model\\shunqing\\s06_formal_10000_b8_seed42",
+  "checkpoint": "D:\\论文\\GNN-UDS\\surrogate\\model\\shunqing\\s06_formal_10000_b8_seed42\\best",
+  "checkpoint_model_sha256": "da1df37461f279f08c7532ff4d2f06b8d55575916914b8a94d9299e6d7f9afc8",
+  "best_epoch": 9098,
+  "best_validation_loss": 0.02569115530786803,
+  "train_event_count": 118,
+  "validation_event_count": 27,
+  "heldout_event_count": 3,
+  "heldout_event_ids": [
+    141,
+    142,
+    145
+  ],
+  "heldout_event_names": [
+    "test_bpswmm_118",
+    "test_bpswmm_133",
+    "test_bpswmm_1612"
+  ],
+  "seq_in": 60,
+  "seq_out": 60,
+  "window_stride": 60,
+  "teacher_forced_true_history": true,
+  "normalization_events": "train_event_ids.npy",
+  "source_set_caveat": "The split is reconstructed from public information; it is not claimed to be the original unpublished event-ID split.",
+  "test_caveat": "The 25 test_bpswmm events are not all independent in this split; 17 train, 5 validation, 3 held-out."
+}

@@ -8,7 +8,7 @@
 - [x] 理解节点级、边级和图级任务
 - [x] 完成 S06 论文的第一轮精读
 
-## 阶段二：完成最小复现（当前）
+## 阶段二：完成最小复现（已完成）
 
 - [x] 完成 shunqing 的 SWMM 数据生成
 - [x] 确认 `states.npy`、`perfs.npy`、`rains.npy` 等文件生成
@@ -19,13 +19,15 @@
 
 ## 阶段三：论文风格实验
 
-- [ ] 训练 60→60 的时空模型
+- [x] 训练 60→60 的时空模型
 - [ ] 比较 GCN/GAT 或不同 GNN 层数
-- [ ] 做 node-edge fusion 消融
+- [x] 做 node-edge fusion 消融（当前记录为输出级 edge-flow fusion）
 - [ ] 做 flooding 分类开关消融
-- [ ] 记录 RMSE、MAE、洪涝 Precision/Recall/F1
+- [x] 记录 RMSE、MAE、洪涝 Precision/Recall/F1
 
-## 阶段四：连接 AI inference
+补充：已完成 148 场事件、118/27/3 划分下的冻结基线、三档训练对比、逐事件测试、总雨量与最大逐步雨强分组、bootstrap 和降雨特征—误差相关性分析。静态降雨条件拼接模型完成单 seed 筛选但未超过冻结基线。过程记录见 [`learning_logs/s06/2026-09-24_to_2026-09-28.md`](learning_logs/s06/2026-09-24_to_2026-09-28.md)，当前边界见 [`projects/s06-reproduction/status.md`](projects/s06-reproduction/status.md)。
+
+## 阶段四：连接 AI inference（待开展）
 
 - [ ] 测量单样本推理延迟
 - [ ] 测量不同 batch size 的吞吐量
@@ -33,7 +35,7 @@
 - [ ] 尝试减少层数、hidden dimension 或序列长度
 - [ ] 在保证误差可接受的情况下测试量化或蒸馏
 
-## 阶段五：连接 DRL/MPC
+## 阶段五：连接 DRL/MPC（待开展）
 
 - [ ] 用 surrogate 替代部分环境 rollout
 - [ ] 比较 SWMM rollout 与 surrogate rollout 的速度和误差

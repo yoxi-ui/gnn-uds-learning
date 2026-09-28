@@ -1,0 +1,47 @@
+dataset: "D:\\\u8BBA\u6587\\GNN-UDS\\surrogate\\envs\\data\\shunqing\\s06_148_118_27_3"
+model_dir: "D:\\\u8BBA\u6587\\GNN-UDS\\surrogate\\model\\shunqing\\s06_conditioned_5000_b8_seed42_full"
+event_split:
+  train: 118
+  validation: 27
+  heldout_test: 3
+seed: 42
+epochs: 5000
+batch_size: 8
+validation_batches: 8
+validation_mode: fixed
+validation_seed: 42
+interval: 5
+learning_rate: 0.001
+embed_size: 128
+hidden_dim: 64
+kernel_size: 3
+seq_in: 60
+seq_out: 60
+length_m: 1000.0
+n_sp_layer: 3
+n_tp_layer: 5
+conv: GATconv
+recurrent: Conv1D
+paper_variables: true
+edge_fusion: true
+resnet: true
+if_flood: 1
+dropout: 0.0
+activation: relu
+balance: false
+gradnorm: false
+act: false
+roll: 0
+rainfall_condition: true
+rainfall_condition_features:
+- total_rainfall
+- max_step_intensity
+- duration_minutes
+- peak_time_fraction
+- pre_peak_ratio
+- post_peak_ratio
+normalization_events: train_event_ids.npy
+heldout_events:
+- 141
+- 142
+- 145

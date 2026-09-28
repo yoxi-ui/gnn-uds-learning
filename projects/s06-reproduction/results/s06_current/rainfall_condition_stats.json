@@ -1,0 +1,28 @@
+{
+  "feature_names": [
+    "total_rainfall",
+    "max_step_intensity",
+    "duration_minutes",
+    "peak_time_fraction",
+    "pre_peak_ratio",
+    "post_peak_ratio"
+  ],
+  "mean": [
+    39.322881336371275,
+    12.017796593197321,
+    634.5762711864406,
+    0.3719094313183724,
+    0.29423475608910643,
+    0.7003102588587359
+  ],
+  "std": [
+    28.079627655358568,
+    8.51546577893347,
+    305.0830508427495,
+    0.23735276084281362,
+    0.21837024940252414,
+    0.21768697166557133
+  ],
+  "fit_scope": "train_event_ids.npy",
+  "source": "rains.npy + event_manifest.csv"
+}

@@ -1,0 +1,35 @@
+{
+  "method": "training-only tertiles",
+  "primary_grouping": "total_rainfall",
+  "thresholds": {
+    "total_rainfall": {
+      "q1": 26.60000003874302,
+      "q2": 42.200000002980225
+    },
+    "max_step_intensity": {
+      "q1": 7.300000190734859,
+      "q2": 13.600000381469727
+    }
+  },
+  "training_event_count": 118,
+  "group_counts_all_events": {
+    "large": 54,
+    "medium": 51,
+    "small": 43
+  },
+  "group_counts_by_split": {
+    "heldout_test": {
+      "large": 3
+    },
+    "train": {
+      "large": 40,
+      "medium": 38,
+      "small": 40
+    },
+    "validation": {
+      "large": 11,
+      "medium": 13,
+      "small": 3
+    }
+  }
+}

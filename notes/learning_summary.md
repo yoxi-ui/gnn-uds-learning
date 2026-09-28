@@ -1,6 +1,8 @@
 # 学习总总结：从深度学习到 GNN 排水管网替代模型
 
-> 最后更新：2026-09-19
+> 最后更新：2026-09-28
+
+最新的 S06 正式基线、降雨工况敏感性分析和条件化模型审计，已按日期整理在 [`learning_logs/s06/2026-09-24_to_2026-09-28.md`](../learning_logs/s06/2026-09-24_to_2026-09-28.md)，当前实验边界见 [`projects/s06-reproduction/status.md`](../projects/s06-reproduction/status.md)。
 
 ## 0. 我的学习主线
 

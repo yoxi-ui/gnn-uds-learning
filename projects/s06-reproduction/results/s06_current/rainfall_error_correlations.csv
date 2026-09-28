@@ -1,0 +1,13 @@
+﻿split,feature,metric,event_count,pearson_r,spearman_r
+validation,total_rainfall,node_rmse,27,0.7012467187461559,0.8223443223443224
+validation,total_rainfall,pipe_rmse,27,0.7082874798228544,0.8235653235653235
+validation,total_rainfall,flood_volume_rmse,27,0.6855094252807248,0.8064713064713065
+validation,max_step_intensity,node_rmse,27,0.9366782607148177,0.9326820441438306
+validation,max_step_intensity,pipe_rmse,27,0.9493610798780442,0.9400091698588722
+validation,max_step_intensity,flood_volume_rmse,27,0.9310602665497527,0.9323767472390373
+heldout_test,total_rainfall,node_rmse,3,0.9640812974580366,1.0
+heldout_test,total_rainfall,pipe_rmse,3,0.9668718119591645,1.0
+heldout_test,total_rainfall,flood_volume_rmse,3,0.9876604483605259,1.0
+heldout_test,max_step_intensity,node_rmse,3,0.9885801389027522,1.0
+heldout_test,max_step_intensity,pipe_rmse,3,0.9901380283770771,1.0
+heldout_test,max_step_intensity,flood_volume_rmse,3,0.9992122026269429,1.0
